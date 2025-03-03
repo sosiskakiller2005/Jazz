@@ -2,42 +2,51 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="Button">
         <Setter Property="FontSize" Value="25" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="Width" Value="240" />
+        <Setter Property="Width" Value="200" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#364750" 
-                            BorderBrush="Transparent"
+                    <Border BorderBrush="Transparent"
                             BorderThickness="1" 
-                            CornerRadius="10" 
+                            CornerRadius="20" 
                             Padding="5">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <LinearGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                        <RotateTransform Angle="-94" CenterX="0.5" CenterY="0.5"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </LinearGradientBrush.RelativeTransform>
+                                <GradientStop Color="#FF1241E7"/>
+                                <GradientStop Color="#FF2DD8AF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
                         <ContentPresenter HorizontalAlignment="Center" 
                                           VerticalAlignment="Center"
-                                          TextElement.Foreground="White" />
+                                          TextElement.Foreground="Black" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style x:Key="PressedBtn" TargetType="Button">
-        <Setter Property="FontSize" Value="25" />
-        <Setter Property="FontFamily" Value="{StaticResource Inter}" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="Width" Value="200" />
-        <Setter Property="Height" Value="50" />
+        <Setter Property="Height" Value="40" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="Black" 
-                            BorderBrush="Transparent"
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Padding="5">
+                    <Border 
+                        Background="#73EDC8"
+                        BorderBrush="Transparent"
+                    BorderThickness="1" 
+                    CornerRadius="15" 
+                    Padding="5">
                         <ContentPresenter HorizontalAlignment="Center" 
-                                          VerticalAlignment="Center"
-                                          TextElement.Foreground="White" />
+                                  VerticalAlignment="Center"
+                                  TextElement.Foreground="#249760" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -45,21 +54,19 @@
     </Style>
     <Style x:Key="UnpressedBtn" TargetType="Button">
         <Setter Property="FontSize" Value="25" />
-        <Setter Property="FontFamily" Value="{StaticResource Inter}" />
-        <Setter Property="Foreground" Value="Black" />
-        <Setter Property="Width" Value="200" />
-        <Setter Property="Height" Value="50" />
+        <Setter Property="Height" Value="40" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="#F1F1F1" 
-                            BorderBrush="Transparent"
-                            BorderThickness="1" 
-                            CornerRadius="10" 
-                            Padding="5">
+                    <Border 
+                Background="#E5E5E5"
+                BorderBrush="Transparent"
+            BorderThickness="1" 
+            CornerRadius="15" 
+            Padding="5">
                         <ContentPresenter HorizontalAlignment="Center" 
-                                          VerticalAlignment="Center"
-                                          TextElement.Foreground="White" />
+                          VerticalAlignment="Center"
+                          TextElement.Foreground="#249760" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

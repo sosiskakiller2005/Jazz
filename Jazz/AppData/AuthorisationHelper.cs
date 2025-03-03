@@ -12,41 +12,31 @@ namespace Jazz.AppData
     {
         private static JazzDbEntities _context = App.GetContext();
         public static User selectedUser;
+
         /// <summary>
         /// Авторизует пользователя
         /// </summary>
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        
         public static bool Authorise(string login, string password)
         {
-            List<User> users = _context.User.ToList();
-
-            if (login == string.Empty || password == string.Empty)
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBoxHelper.Error("Не все поля для ввода были заполнены.");
                 return false;
             }
-            else 
+
+            selectedUser = _context.User.FirstOrDefault(user => user.Login == login && user.Password == password);
+
+            if (selectedUser != null)
             {
-                foreach (User user in users)
-                {
-                    if (user.Login == login && user.Password == password)
-                    {
-                        selectedUser = user;
-                        return true;
-                    }
-                }
-                if (selectedUser != null)
-                {
-                    return true;
-                }
-                else
-                {
-                    MessageBoxHelper.Error("Неправильно введен логин или пароль.");
-                    return false;
-                }
+                return true;
+            }
+            else
+            {
+                MessageBoxHelper.Error("Неправильно введен логин или пароль.");
+                return false;
             }
         }
     }

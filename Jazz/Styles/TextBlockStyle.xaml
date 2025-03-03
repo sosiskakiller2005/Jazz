@@ -4,8 +4,6 @@
         <Setter Property="FontSize" Value="22" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="#364750" />
         <Setter Property="FontFamily" Value="pack://application:,,,/resources/fonts/#Inter" />
-        <Setter Property="FontWeight" Value="SemiBold" />
     </Style>
 </ResourceDictionary>

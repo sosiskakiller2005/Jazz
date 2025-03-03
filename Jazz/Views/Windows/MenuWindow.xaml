@@ -1,0 +1,35 @@
+﻿<Window x:Class="Jazz.Views.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jazz.Views.Windows"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="700" Width="1200">
+    <Window.Background>
+        <ImageBrush ImageSource="/Resources/background.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Border Background="#13D8CC">
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="MainBtn" Content="ГЛАВНАЯ" Click="MainBtn_Click" Style="{StaticResource PressedBtn}"/>
+                <Border Width="30"/>
+                <Button Name="ServicesBtn" Content="УСЛУГИ" Click="ServicesBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <Border Width="30"/>
+                <Button Name="ArchiveBtn" Content="АРХИВ" Click="ArchiveBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <Border Width="30"/>
+                <Button Name="StudentsBtn" Content="УЧЕНИКИ" Click="StudentsBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <Border Width="30"/>
+                <Button Name="ScheduleBtn" Content="РАСПИСАНИЕ ЗАНЯТИЙ" Click="ScheduleBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <Border Width="30"/>
+                <Button Name="AppointmentsBtn" Content="ЗАЯВКИ НА ЗАПИСЬ" Click="AppointmentsBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+            </StackPanel>
+
+        </Border>
+    </Grid>
+</Window>
