@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jazz.Views.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,7 @@ namespace Jazz.Views.Windows
         private void StudentsBtn_Click(object sender, RoutedEventArgs e)
         {
             ChangeColor(StudentsBtn.Name);
+            MainFrm.Navigate(new StudentsPage());
         }
 
         private void ScheduleBtn_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,32 @@
+﻿<Page x:Class="Jazz.Views.Pages.StudentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Jazz.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="620" d:DesignWidth="1200"
+      Title="StudentsPage">
+
+    <StackPanel>
+        <Border Height="30"/>
+        <TextBlock Text="БАЗА ДАННЫХ УЧЕНИКА" FontSize="35"/>
+        <Border Height="30"/>
+        <DataGrid Name="StudentsDg">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="КОД УЧЕНИКА" Binding="{Binding Id}" FontSize="20"/>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding Fullname}" FontSize="20"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday, StringFormat={}{0:dd.MM.yyy}}" FontSize="20"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border Height="30"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click"/>
+            <Border Width="50"/>
+            <Button Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
+            <Border Width="50"/>
+            <Button Name="EditBtn" Content="Редактировать" Click="EditBtn_Click"/>
+        </StackPanel> 
+    </StackPanel>
+</Page>

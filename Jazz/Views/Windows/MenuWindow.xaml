@@ -31,5 +31,6 @@
             </StackPanel>
 
         </Border>
+        <Frame Name="MainFrm" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
