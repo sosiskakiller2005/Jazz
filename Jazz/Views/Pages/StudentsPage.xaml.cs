@@ -42,7 +42,21 @@ namespace Jazz.Views.Pages
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (StudentsDg.SelectedItem as Student == null)
+            {
+                MessageBoxHelper.Warning("Выберите студента!");
+            }
+            else
+            {
+                if (MessageBoxHelper.Question("Удалить выбранного ученика?"))
+                {
+                    Student selectedStudent = StudentsDg.SelectedItem as Student;
+                    _context.Student.Remove(selectedStudent);
+                    _context.SaveChanges();
+                    StudentsDg.ItemsSource = _context.Student.ToList();
+                    MessageBoxHelper.Information("Студент успешно удален!");
+                }
+            }
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
