@@ -27,17 +27,17 @@ namespace Jazz.Views.Windows
 
         private void MainBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangeColor(MainBtn.Name);
+            //ChangeColor(MainBtn.Name);
         }
 
         private void ServicesBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangeColor(ServicesBtn.Name);
+            //ChangeColor(ServicesBtn.Name);
         }
 
         private void ArchiveBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangeColor(ArchiveBtn.Name);
+            //ChangeColor(ArchiveBtn.Name);
         }
 
         private void StudentsBtn_Click(object sender, RoutedEventArgs e)
@@ -49,22 +49,23 @@ namespace Jazz.Views.Windows
         private void ScheduleBtn_Click(object sender, RoutedEventArgs e)
         {
             ChangeColor(ScheduleBtn.Name);
+            MainFrm.Navigate(new SchedulePage());
         }
 
         private void AppointmentsBtn_Click(object sender, RoutedEventArgs e)
         {
-            ChangeColor(AppointmentsBtn.Name);
+            //ChangeColor(AppointmentsBtn.Name);
         }
 
         private void ChangeColor(string name)
         {
             List<Button> buttons = new List<Button>();
-            buttons.Add(MainBtn);
-            buttons.Add(ServicesBtn);
-            buttons.Add(ArchiveBtn);
+            //buttons.Add(MainBtn);
+            //buttons.Add(ServicesBtn);
+            //buttons.Add(ArchiveBtn);
             buttons.Add(StudentsBtn);
             buttons.Add(ScheduleBtn);
-            buttons.Add(AppointmentsBtn);
+            //buttons.Add(AppointmentsBtn);
 
             foreach (Button btn in buttons)
             {

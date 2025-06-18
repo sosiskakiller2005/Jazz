@@ -17,17 +17,17 @@
 
         <Border Background="#13D8CC">
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Name="MainBtn" Content="ГЛАВНАЯ" Click="MainBtn_Click" Style="{StaticResource PressedBtn}"/>
+                <!--<Button Name="MainBtn" Content="ГЛАВНАЯ" Click="MainBtn_Click" Style="{StaticResource PressedBtn}"/>-->
                 <Border Width="30"/>
-                <Button Name="ServicesBtn" Content="УСЛУГИ" Click="ServicesBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <!--<Button Name="ServicesBtn" Content="УСЛУГИ" Click="ServicesBtn_Click" Style="{StaticResource UnpressedBtn}"/>-->
                 <Border Width="30"/>
-                <Button Name="ArchiveBtn" Content="АРХИВ" Click="ArchiveBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <!--<Button Name="ArchiveBtn" Content="АРХИВ" Click="ArchiveBtn_Click" Style="{StaticResource UnpressedBtn}"/>-->
                 <Border Width="30"/>
                 <Button Name="StudentsBtn" Content="УЧЕНИКИ" Click="StudentsBtn_Click" Style="{StaticResource UnpressedBtn}"/>
                 <Border Width="30"/>
                 <Button Name="ScheduleBtn" Content="РАСПИСАНИЕ ЗАНЯТИЙ" Click="ScheduleBtn_Click" Style="{StaticResource UnpressedBtn}"/>
                 <Border Width="30"/>
-                <Button Name="AppointmentsBtn" Content="ЗАЯВКИ НА ЗАПИСЬ" Click="AppointmentsBtn_Click" Style="{StaticResource UnpressedBtn}"/>
+                <!--<Button Name="AppointmentsBtn" Content="ЗАЯВКИ НА ЗАПИСЬ" Click="AppointmentsBtn_Click" Style="{StaticResource UnpressedBtn}"/>-->
             </StackPanel>
 
         </Border>
